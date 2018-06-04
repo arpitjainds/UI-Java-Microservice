@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="bulma.css">
+<title>MicroServices</title>
+</head>
+<body>
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-size-1">
+        Microservice UI
+      </h1>
+      <h2 class="subtitle">
+        (To Call Fibonacci Microservice API)
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h6 class="title is-size-4">
+        Enter Number of Iterations
+      </h6><br>
+      <h2 class="subtitle">
+        <form action="" method="post">
+          <input style="width:250px" type="text" name="iteration" class="input is-rounded" value="" id="iterationcount" placeholder=""/> <input type="button" class="button is-rounded" value="Go" OnClick="kk()"/>
+        </form>
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h6 class="title is-size-4">
+        Enter the Duration
+      </h6><br>
+      <h2 class="subtitle">
+        <form action="" method="post">
+          <input style="width:250px" type="text" name="duration" class="input is-rounded" value="" id="durationcount" placeholder=""/> <input type="button" class="button is-rounded" value="Go" OnClick="mm()"/>
+        </form>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+    </div>
+  </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+    </div>
+  </div>
+</section>
+
+</body>
+
+<script language="javascript" type="text/javascript">
+    function kk(){
+    	{
+    	    var url = "http://fibonacci-service-talkative-emu.mybluemix.net/fibonacci?iteration="+document.getElementById('iterationcount').value;
+    	    window.location(url);
+    	}
+    }
+
+    function mm(){
+    	{
+    	    var url1 = "http://fibonacci-service-talkative-emu.mybluemix.net/fibonacci?duration="+document.getElementById('durationcount').value;
+    	    window.location(url1);
+    	}
+    }
+</script>
+
+</html>
